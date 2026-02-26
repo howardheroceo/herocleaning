@@ -1,3 +1,4 @@
+<DOCUMENT filename="realhero5.html">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -351,13 +352,13 @@
 
         <form id="quote-form" class="grid md:grid-cols-2 gap-6">
           <label for="name" class="sr-only">Full Name</label>
-          <input id="name" type="text" placeholder="Full Name" required class="w-full p-4 rounded-lg text-gray-800">
+          <input id="name" name="name" type="text" placeholder="Full Name" required class="w-full p-4 rounded-lg text-gray-800">
           <label for="phone" class="sr-only">Phone Number</label>
-          <input id="phone" type="tel" placeholder="Phone Number" required class="w-full p-4 rounded-lg text-gray-800">
+          <input id="phone" name="phone" type="tel" placeholder="Phone Number" required class="w-full p-4 rounded-lg text-gray-800">
           <label for="email" class="sr-only">Email Address</label>
-          <input id="email" type="email" placeholder="Email Address" required class="w-full p-4 rounded-lg md:col-span-2 text-gray-800">
+          <input id="email" name="email" type="email" placeholder="Email Address" required class="w-full p-4 rounded-lg md:col-span-2 text-gray-800">
           <label for="message" class="sr-only">Tell us about your cleaning needs</label>
-          <textarea id="message" placeholder="Tell us about your cleaning needs (home size, frequency, special requests...)" rows="5" class="w-full p-4 rounded-lg md:col-span-2 text-gray-800"></textarea>
+          <textarea id="message" name="message" placeholder="Tell us about your cleaning needs (home size, frequency, special requests...)" rows="5" class="w-full p-4 rounded-lg md:col-span-2 text-gray-800"></textarea>
           
           <div class="md:col-span-2">
             <h4 class="font-semibold mb-3">Services Interested In:</h4>
@@ -408,7 +409,7 @@
             </li>
             <li class="flex items-center justify-center md:justify-start gap-2">
               <i class="fas fa-envelope text-blue-400"></i>
-              <a href="mailto:howardceo@herocleaningsolutions.com" class="hover:text-white transition">howardceo@herocleaningsolutions.com</a>
+              <a href="mailto:support@herocleaningsolutions.com" class="hover:text-white transition">support@herocleaningsolutions.com</a>
             </li>
             <li class="flex items-center justify-center md:justify-start gap-2">
               <i class="fas fa-map-marker-alt text-blue-400"></i>
@@ -498,6 +499,19 @@
     // Form submit (demo)
     document.getElementById('quote-form').addEventListener('submit', e => {
       e.preventDefault();
+      let formData = new FormData(document.getElementById('quote-form'));
+      let body = '';
+      for (let [key, value] of formData.entries()) {
+        body += `${key}: ${value}\n`;
+      }
+      body += '\nSelected Services:\n' + selectedServices.map(s => `${s.name} - ${s.price}`).join('\n');
+      let mailtoUrl = `mailto:support@herocleaningsolutions.com?subject=Free%20Quote%20Request&body=${encodeURIComponent(body)}`;
+      let a = document.createElement('a');
+      a.href = mailtoUrl;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
       document.getElementById('quote-modal').classList.remove('hidden');
     });
 
@@ -591,4 +605,4 @@
   </script>
 
 </body>
-</html>
+</html></DOCUMENT>
