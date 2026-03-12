@@ -550,29 +550,6 @@
       });
     });
 
-    // Book Now Popup Logic
-    const bookNowModal = document.getElementById('book-now-modal');
-    const closeBookNow = document.getElementById('close-book-now');
-    const bookNowQuote = document.getElementById('book-now-quote');
-
-    function showBookNowModal() {
-      if (bookNowModal.classList.contains('hidden')) {
-        bookNowModal.classList.remove('hidden');
-      }
-    }
-
-    // Show initially after 7 seconds
-    window.addEventListener('load', () => {
-      setTimeout(showBookNowModal, 7000);
-      // Then every 30 seconds
-      setInterval(showBookNowModal, 30000);
-    });
-
-    // Close popup
-    closeBookNow.addEventListener('click', () => {
-      bookNowModal.classList.add('hidden');
-    });
-
     // Close and scroll to quote section
     bookNowQuote.addEventListener('click', (e) => {
       e.preventDefault();
@@ -606,7 +583,7 @@
 
 </body>
 </html></DOCUMENT>
-<iframe src="https://herocleaningsolutions.bookingkoala.com/booknow?embed=true" style="border:none;height:1000px" width="100%" scrolling="no"></iframe><script src="https://herocleaningsolutions.bookingkoala.com/resources/embed.js" defer></script>
+
 
 
 
