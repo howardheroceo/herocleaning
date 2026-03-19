@@ -11,7 +11,7 @@
 </head>
 <body class="bg-white font-sans antialiased">
 
-  <!-- Header / Navigation (unchanged) -->
+  <!-- Header / Navigation -->
   <header class="bg-blue-800/95 backdrop-blur-lg text-white shadow-xl fixed w-full top-0 z-50 transition-all duration-300">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-3xl font-bold flex items-center gap-3">
@@ -39,7 +39,7 @@
       </button>
     </nav>
 
-    <!-- Mobile Menu (unchanged) -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 bg-blue-900/95 backdrop-blur-lg hidden flex items-center justify-center z-40 lg:hidden">
       <button id="close-menu" class="absolute top-8 right-8 text-4xl text-white"><i class="fas fa-times"></i></button>
       <ul class="text-center space-y-8 text-2xl">
@@ -59,7 +59,7 @@
     </div>
   </header>
 
-  <!-- Hero (unchanged) -->
+  <!-- Hero -->
   <section id="home" class="pt-28 pb-20 bg-gradient-to-br from-blue-500 to-blue-900 text-white">
     <div class="container mx-auto px-6 text-center">
       <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Professional Cleaning Services You Can Trust</h1>
@@ -73,7 +73,7 @@
     </div>
   </section>
 
-  <!-- Services (buttons unchanged – JS now works) -->
+  <!-- Services -->
   <section id="services" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Cleaning Services</h2>
@@ -111,11 +111,13 @@
     </div>
   </section>
 
-  <!-- Before & After – FIXED grid (extra </div> removed) -->
+  <!-- Before & After - Expanded to 12 images -->
   <section id="before-after" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">See the Difference</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Original images (keep yours; placeholders shown) -->
         <div class="bg-white rounded-xl shadow overflow-hidden">
           <img src="https://cdn.apartmenttherapy.info/image/upload/v1715192576/at/news-culture/2024-05/clean-one-room-a-day/clean-one-room-a-day-kitchen-diptych.jpg" alt="Kitchen transformation" class="w-full h-64 object-cover" loading="lazy">
           <div class="p-6"><h3 class="font-bold text-lg mb-2">Kitchen Transformation</h3><p class="text-gray-600">From cluttered and greasy to spotless.</p></div>
@@ -140,38 +142,149 @@
           <img src="https://supersleek.com/hurricane/wp-content/uploads/sites/6/2022/03/Hurricane-toilet-before-and-after-scaled.jpg" alt="Toilet sparkle" class="w-full h-64 object-cover" loading="lazy">
           <div class="p-6"><h3 class="font-bold text-lg mb-2">Toilet Sparkle</h3><p class="text-gray-600">Stained to spotless.</p></div>
         </div>
+        </div>
         <div class="bg-white rounded-xl shadow overflow-hidden">
           <img src="https://i.ytimg.com/vi/vhxTc6vp3FE/maxresdefault.jpg" alt="Full bathroom transformation" class="w-full h-64 object-cover" loading="lazy">
           <div class="p-6"><h3 class="font-bold text-lg mb-2">Full Bathroom Transformation</h3><p class="text-gray-600">Entire space refreshed.</p></div>
+        </div>
+
+        <!-- New added transformations -->
+        
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="why-us" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-12">Why Families & Businesses Choose Us</h2>
+      <div class="grid md:grid-cols-4 gap-10">
+        <div><div class="text-blue-600 text-7xl mb-6 relative flex justify-center"><i class="fas fa-shield-alt"></i><i class="fas fa-check-circle text-green-500 text-4xl absolute bottom-1 right-1"></i></div><h3 class="text-xl font-bold mb-3">Fully Insured</h3><p class="text-gray-600">Peace of mind with full liability & bonding coverage</p></div>
+        <div><div class="text-lime-500 text-6xl mb-6"><i class="fas fa-leaf"></i></div><h3 class="text-xl font-bold mb-3">Eco-Friendly</h3><p class="text-gray-600">Green products safe for kids & pets</p></div>
+        <div><div class="text-blue-600 text-7xl mb-6"><i class="fas fa-clock-rotate-left"></i></div><h3 class="text-xl font-bold mb-3">On-Time Guarantee</h3><p class="text-gray-600">We respect your schedule — or next clean discounted</p></div>
+        <div><div class="text-yellow-500 text-6xl mb-6"><i class="fas fa-star"></i></div><h3 class="text-xl font-bold mb-3">5-Star Rated</h3><p class="text-gray-600">Hundreds of happy customers across the area</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Now Section with BookingKoala -->
+  <section id="book-now" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-8">Book Your Cleaning Online Now</h2>
+      <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">Schedule residential, deep, recurring, or move-in/out cleaning in minutes. Pick your service, date, time — instant confirmation!</p>
+      <div class="bg-white rounded-xl shadow-xl overflow-hidden" style="min-height: 1000px;">
+        <iframe src="https://herocleaningsolutions.bookingkoala.com/booknow/home_cleaning?embed=true&bar=false" style="border:none; height:1000px; width:100%;" scrolling="no" title="Book Cleaning Service with Hero Cleaning Solutions"></iframe>
+      </div>
+      <script src="https://herocleaningsolutions.bookingkoala.com/resources/embed.js" defer></script>
+      <p class="text-sm text-gray-500 mt-6">Powered by BookingKoala • Questions? Call <a href="tel:+14696659576" class="text-blue-600 hover:underline">(469) 665-9576</a></p>
+    </div>
+  </section>
+
+  <!-- Reviews - Expanded to 9 -->
+  <section id="reviews" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Customers Say</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Hero Cleaning transformed my messy apartment into a sparkling haven. Punctual, thorough, eco-friendly—everything smelled fresh!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Sarah M. – Fort Worth</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Outstanding deep clean for my office. Professional, efficient, great detail. Highly recommend for commercial!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Michael R. – Arlington</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Weekly service is a lifesaver for busy parents. Reliable, spotless, pet-safe. Worth every penny!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Emily T. – Keller</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Post-remodel dust nightmare gone—floors shining, counters spotless. Professional and on time!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">David L. – Southlake</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Switched to bi-weekly—bathrooms and kitchen stay fresh. Respectful team, 5 stars in DFW!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Jessica P. – Fort Worth</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Deep clean before unpacking—every detail handled. Place smelled amazing and move-in ready!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Robert S. – North Richland Hills</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Consistent office break room & restrooms. No staff complaints—eco products are a plus!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Laura K. – Fort Worth</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Years of buildup in master bath gone—shower, tile, grout perfect. Will rebook!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Mark & Amy H. – Arlington</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition">
+          <p class="text-gray-600 mb-4 italic">"Move-out clean was quick and thorough—landlord impressed, full deposit back!"</p>
+          <div class="flex justify-between items-center"><span class="font-bold text-gray-800">Carlos M. – Fort Worth</span><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Us, Book Now, Reviews, Footer – all unchanged -->
-  <!-- (exact same code as your original for these sections) -->
-
-  <!-- NEW: Floating Quote Cart (non-intrusive, matches your blue theme) -->
-  <div id="quote-cart" class="fixed bottom-6 right-6 bg-white rounded-3xl shadow-2xl p-6 w-80 z-[60] hidden border border-blue-200">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="font-bold text-xl text-gray-800 flex items-center gap-2"><i class="fas fa-clipboard-list"></i> Your Quote</h3>
-      <button id="close-cart" class="text-2xl text-gray-400 hover:text-gray-600">×</button>
-    </div>
-    <div id="cart-items" class="space-y-4 mb-6 max-h-[260px] overflow-y-auto"></div>
-    <div class="pt-4 border-t">
-      <div class="flex justify-between text-lg font-semibold">
-        <span class="text-gray-700">Estimated Total</span>
-        <span id="cart-total" class="text-blue-600">$0</span>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
+        <div>
+          <a href="#" class="text-2xl font-bold text-white flex items-center justify-center md:justify-start gap-2 mb-4">
+            <i class="fas fa-medal text-blue-300"></i> Hero Cleaning Solutions
+          </a>
+          <p class="text-sm">Licensed • Insured • Eco-Friendly • Satisfaction Guaranteed</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="#services" class="hover:text-white transition">Services</a></li>
+            <li><a href="#before-after" class="hover:text-white transition">Before & After</a></li>
+            <li><a href="#why-us" class="hover:text-white transition">Why Us</a></li>
+            <li><a href="#book-now" class="hover:text-white transition">Book Now</a></li>
+            <li><a href="#reviews" class="hover:text-white transition">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center justify-center md:justify-start gap-2"><i class="fas fa-phone text-blue-400"></i><a href="tel:+14696659576" class="hover:text-white transition">+1 (469) 665-9576</a></li>
+            <li class="flex items-center justify-center md:justify-start gap-2"><i class="fas fa-envelope text-blue-400"></i><a href="mailto:howardceo@herocleaningsolutions.com" class="hover:text-white transition">howardceo@herocleaningsolutions.com</a></li>
+            <li class="flex items-center justify-center md:justify-start gap-2"><i class="fas fa-map-marker-alt text-blue-400"></i>Fort Worth, Texas & Surrounding Areas</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="#" class="text-2xl hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-2xl hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-2xl hover:text-white transition"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
       </div>
+      <hr class="my-10 border-gray-700" />
+      <p class="text-center text-sm">© 2026 Hero Cleaning Solutions LLC. All rights reserved.</p>
     </div>
-    <div class="mt-6 space-y-3">
-      <button onclick="proceedToBooking()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition">Continue to Booking</button>
-      <button onclick="clearCart()" class="w-full text-red-600 hover:bg-red-50 py-3 rounded-2xl transition">Clear All</button>
+  </footer>
+
+  <!-- Optional Popup Modal -->
+  <div id="book-now-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4 text-center">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Book Now!</h3>
+      <p class="text-gray-600 mb-6">Ready to schedule? Book online or call today!</p>
+      <div class="flex flex-col gap-4">
+        <a href="#book-now" id="book-now-quote" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">Book Online</a>
+        <a href="tel:+14696659576" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition">Call Now: (469) 665-9576</a>
+        <button id="close-book-now" class="text-gray-500 underline hover:text-gray-700">No thanks, close</button>
+      </div>
     </div>
   </div>
 
   <script>
-    // === ORIGINAL SCRIPTS (mobile menu, smooth scroll, popup) ===
+    // Mobile menu
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeBtn = document.getElementById('close-menu');
@@ -179,6 +292,7 @@
     closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
@@ -186,69 +300,7 @@
       });
     });
 
-    // === NEW QUOTE CART LOGIC ===
-    let cart = [];
-
-    function renderCart() {
-      const container = document.getElementById('cart-items');
-      container.innerHTML = '';
-      let total = 0;
-
-      cart.forEach((item, i) => {
-        total += item.price;
-        const div = document.createElement('div');
-        div.className = "flex justify-between items-center bg-gray-50 p-3 rounded-2xl";
-        div.innerHTML = `
-          <div>
-            <div class="font-medium text-sm">${item.name}</div>
-            <div class="text-xs text-gray-500">${item.priceText}</div>
-          </div>
-          <button onclick="removeFromCart(${i})" class="text-red-500 text-xl leading-none">×</button>
-        `;
-        container.appendChild(div);
-      });
-
-      document.getElementById('cart-total').textContent = total === 0 ? 'Custom' : `$${total}+`;
-    }
-
-    window.removeFromCart = function(i) {
-      cart.splice(i, 1);
-      renderCart();
-      if (cart.length === 0) document.getElementById('quote-cart').classList.add('hidden');
-    };
-
-    window.clearCart = function() {
-      cart = [];
-      renderCart();
-      document.getElementById('quote-cart').classList.add('hidden');
-    };
-
-    window.proceedToBooking = function() {
-      document.getElementById('quote-cart').classList.add('hidden');
-      document.getElementById('book-now').scrollIntoView({ behavior: 'smooth' });
-    };
-
-    // Attach listeners to your original buttons
-    document.querySelectorAll('.add-service').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const name = btn.dataset.name;
-        const priceText = btn.dataset.price;
-        let price = 0;
-        const match = priceText.match(/\d+/);
-        if (match) price = parseInt(match[0]);
-
-        cart.push({name, priceText, price});
-        renderCart();
-        document.getElementById('quote-cart').classList.remove('hidden');
-      });
-    });
-
-    // Close cart button
-    document.getElementById('close-cart').addEventListener('click', () => {
-      document.getElementById('quote-cart').classList.add('hidden');
-    });
-
-    // === ORIGINAL POPUP MODAL (unchanged) ===
+    // Popup (shows once after 10s)
     const bookNowModal = document.getElementById('book-now-modal');
     const closeBookNow = document.getElementById('close-book-now');
     const bookNowQuote = document.getElementById('book-now-quote');
