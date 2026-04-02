@@ -10,11 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body class="bg-white font-sans antialiased">
-
   <!-- Header / Navigation -->
   <header class="bg-blue-800/95 backdrop-blur-lg text-white shadow-xl fixed w-full top-0 z-50 transition-all duration-300">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-3xl font-bold flex items-center gap-3">
+      <a href="#home" class="text-3xl font-bold flex items-center gap-3">
         <i class="fas fa-medal text-yellow-400 text-4xl"></i>
         <span class="tracking-tight">Hero Cleaning Solutions</span>
       </a>
@@ -38,7 +37,6 @@
         <i class="fas fa-bars"></i>
       </button>
     </nav>
-
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 bg-blue-900/95 backdrop-blur-lg hidden flex items-center justify-center z-40 lg:hidden">
       <button id="close-menu" class="absolute top-8 right-8 text-4xl text-white"><i class="fas fa-times"></i></button>
@@ -111,13 +109,11 @@
     </div>
   </section>
 
-  <!-- Before & After - Expanded to 12 images -->
+  <!-- Before & After - FIXED STRUCTURE (all 7 cards now properly inside the grid) -->
   <section id="before-after" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">See the Difference</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Original images (keep yours; placeholders shown) -->
         <div class="bg-white rounded-xl shadow overflow-hidden">
           <img src="https://cdn.apartmenttherapy.info/image/upload/v1715192576/at/news-culture/2024-05/clean-one-room-a-day/clean-one-room-a-day-kitchen-diptych.jpg" alt="Kitchen transformation" class="w-full h-64 object-cover" loading="lazy">
           <div class="p-6"><h3 class="font-bold text-lg mb-2">Kitchen Transformation</h3><p class="text-gray-600">From cluttered and greasy to spotless.</p></div>
@@ -142,16 +138,10 @@
           <img src="https://supersleek.com/hurricane/wp-content/uploads/sites/6/2022/03/Hurricane-toilet-before-and-after-scaled.jpg" alt="Toilet sparkle" class="w-full h-64 object-cover" loading="lazy">
           <div class="p-6"><h3 class="font-bold text-lg mb-2">Toilet Sparkle</h3><p class="text-gray-600">Stained to spotless.</p></div>
         </div>
-        </div>
         <div class="bg-white rounded-xl shadow overflow-hidden">
           <img src="https://i.ytimg.com/vi/vhxTc6vp3FE/maxresdefault.jpg" alt="Full bathroom transformation" class="w-full h-64 object-cover" loading="lazy">
           <div class="p-6"><h3 class="font-bold text-lg mb-2">Full Bathroom Transformation</h3><p class="text-gray-600">Entire space refreshed.</p></div>
         </div>
-
-        <!-- New added transformations -->
-        
-        
-
       </div>
     </div>
   </section>
@@ -169,7 +159,7 @@
     </div>
   </section>
 
-  <!-- Book Now Section with BookingKoala -->
+  <!-- Book Now Section with BookingKoala (unchanged appearance) -->
   <section id="book-now" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold text-gray-800 mb-8">Book Your Cleaning Online Now</h2>
@@ -182,7 +172,7 @@
     </div>
   </section>
 
-  <!-- Reviews - Expanded to 9 -->
+  <!-- Reviews -->
   <section id="reviews" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Customers Say</h2>
@@ -232,7 +222,7 @@
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
         <div>
-          <a href="#" class="text-2xl font-bold text-white flex items-center justify-center md:justify-start gap-2 mb-4">
+          <a href="#home" class="text-2xl font-bold text-white flex items-center justify-center md:justify-start gap-2 mb-4">
             <i class="fas fa-medal text-blue-300"></i> Hero Cleaning Solutions
           </a>
           <p class="text-sm">Licensed • Insured • Eco-Friendly • Satisfaction Guaranteed</p>
@@ -284,7 +274,7 @@
   </div>
 
   <script>
-    // Mobile menu
+    // Mobile menu (unchanged)
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeBtn = document.getElementById('close-menu');
@@ -292,7 +282,7 @@
     closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-    // Smooth scroll
+    // Smooth scroll (unchanged)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
@@ -300,7 +290,7 @@
       });
     });
 
-    // Popup (shows once after 10s)
+    // Popup (unchanged)
     const bookNowModal = document.getElementById('book-now-modal');
     const closeBookNow = document.getElementById('close-book-now');
     const bookNowQuote = document.getElementById('book-now-quote');
@@ -314,6 +304,29 @@
     bookNowQuote.addEventListener('click', e => { e.preventDefault(); bookNowModal.classList.add('hidden'); document.querySelector('#book-now').scrollIntoView({ behavior: 'smooth' }); });
     bookNowModal.addEventListener('click', e => { if (e.target === bookNowModal) bookNowModal.classList.add('hidden'); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { bookNowModal.classList.add('hidden'); mobileMenu.classList.add('hidden'); } });
+
+    // NEW: Make "Add to Quote" buttons functional (scrolls to BookingKoala + shows quick toast)
+    document.querySelectorAll('.add-service').forEach(button => {
+      button.addEventListener('click', function() {
+        const serviceName = this.getAttribute('data-name');
+        
+        // Smooth scroll to booking section
+        const bookSection = document.getElementById('book-now');
+        if (bookSection) bookSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Temporary toast (green, disappears automatically - does NOT change site appearance)
+        const toast = document.createElement('div');
+        toast.style.cssText = 'position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:#10b981; color:white; padding:16px 24px; border-radius:9999px; box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.2); z-index:99999; display:flex; align-items:center; gap:8px; white-space:nowrap;';
+        toast.innerHTML = `<i class="fas fa-check-circle"></i> ${serviceName} added to your quote!`;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.transition = 'all 0.3s ease';
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+        }, 2800);
+      });
+    });
   </script>
 </body>
 </html>
